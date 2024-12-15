@@ -1,0 +1,257 @@
+[gd_scene load_steps=15 format=3 uid="uid://co0y2qmjkdywu"]
+
+[ext_resource type="Texture2D" uid="uid://vg476ykf1gr8" path="res://assets/sprites/main menu/TownBG.jpg" id="1_g5v20"]
+[ext_resource type="Script" path="res://scripts/UI/TOWNS/town.gd" id="1_mv1go"]
+[ext_resource type="Texture2D" uid="uid://tv84wwav5d4e" path="res://temporales/hire people.png" id="1_net28"]
+[ext_resource type="Texture2D" uid="uid://ctgqlqpmh60c4" path="res://temporales/log reputacion.png" id="2_5uieh"]
+[ext_resource type="Texture2D" uid="uid://bqm1wt0btkrhx" path="res://temporales/log-economi.png" id="3_vjoi1"]
+[ext_resource type="Texture2D" uid="uid://dkiol73he6ah6" path="res://temporales/log.misions.png" id="4_hrlqs"]
+[ext_resource type="Texture2D" uid="uid://bu4nb1xvqt2mt" path="res://temporales/theoretical balance.png" id="5_im3pe"]
+[ext_resource type="Texture2D" uid="uid://fnw3l1elchd1" path="res://temporales/town industries.png" id="6_nqjsc"]
+[ext_resource type="Texture2D" uid="uid://dijguqm7v6udt" path="res://temporales/town map.png" id="7_d6u5d"]
+[ext_resource type="Texture2D" uid="uid://f1c4i6pnpr4b" path="res://temporales/town recend data.png" id="8_nuxby"]
+[ext_resource type="Texture2D" uid="uid://egtcveso0h5b" path="res://temporales/trade.png" id="9_pmbb4"]
+[ext_resource type="Texture2D" uid="uid://bw73jp075nt6s" path="res://temporales/your industries.png" id="10_l6gbe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njfwv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vafg6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mv1go")
+
+[node name="TownBG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g5v20")
+expand_mode = 1
+
+[node name="hirepeople" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_net28")
+expand_mode = 1
+
+[node name="log reputacion" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5uieh")
+expand_mode = 1
+
+[node name="log economy" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vjoi1")
+expand_mode = 1
+
+[node name="log missions" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hrlqs")
+expand_mode = 1
+
+[node name="stadistics theorical" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_im3pe")
+expand_mode = 1
+
+[node name="town industries" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_nqjsc")
+expand_mode = 1
+
+[node name="town map" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_d6u5d")
+expand_mode = 1
+
+[node name="stadistic recent data" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_nuxby")
+expand_mode = 1
+
+[node name="trade" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_pmbb4")
+expand_mode = 1
+
+[node name="your industries" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_l6gbe")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_njfwv")
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="LOAD" type="Label" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "LOAD"
+
+[node name="MONEY" type="Label" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MONEY"
+horizontal_alignment = 1
+
+[node name="DATE" type="Label" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DATE"
+horizontal_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -331.0
+offset_right = -19.0
+offset_bottom = -33.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="town" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "TOWN"
+
+[node name="stadistics" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "statistics"
+
+[node name="hirepeople" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "hire people"
+
+[node name="industries" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "industries"
+
+[node name="caravan menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "caravan menu"
+
+[node name="map" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "map"
+
+[node name="leave" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "leave"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 949.0
+offset_bottom = -33.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vafg6")
+
+[node name="TextureRect" type="TextureRect" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel2"]
+modulate = Color(0.266667, 0.2, 0.0666667, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -61.5
+offset_top = 30.0
+offset_right = 66.5
+offset_bottom = 61.0
+grow_horizontal = 2
+text = "town"
+horizontal_alignment = 1

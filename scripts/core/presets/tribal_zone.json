@@ -1,0 +1,84 @@
+{
+  "zones": [
+	{
+	  "name": "You Bunker",
+	  "id": 1605,
+	  "position": {"x": -10000, "y": -1000},
+	  "population": 48,
+	  "obligatoryPeople": [],
+	  "allowsSlaves": false,
+	  "locations": [
+		{
+		  "x": 150,
+		  "y": 125,
+		  "category": 1,
+		  "subCategory": 5,
+		  "symbol": 15,
+		  "visible": true,
+		  "name": 1632,
+		  "margin": 0.5
+		},
+		{
+		  "x": 355,
+		  "y": 80,
+		  "category": 1,
+		  "subCategory": 6,
+		  "symbol": 17,
+		  "visible": true,
+		  "name": 1662,
+		  "filters": ["animals", "carts", "cars", "slaves"],
+		  "margin": 0.5
+		},
+		{
+		  "x": 455,
+		  "y": 200,
+		  "category": 2,
+		  "subCategory": 1,
+		  "symbol": 4,
+		  "visible": true,
+		  "name": 1416,
+		  "relPrice": 0,
+		  "surgeries": [1, 2, 3]
+		}
+	  ],
+	  "industries": [
+		{"type": 23, "volume": 15, "forSale": false},
+		{"type": 24, "volume": 12, "forSale": false},
+		{"type": 25, "volume": 3, "forSale": false},
+		{"type": 26, "volume": 6, "forSale": false}
+	  ],
+	  "storagePrice": 100,
+	  "tax": 0.05,
+	  "electricityPrice": 0.3,
+	  "noticeability": 160
+	},
+	{
+	  "name": "Silos",
+	  "id": 1610,
+	  "position": {"x": -9950, "y": -1300},
+	  "population": 1,
+	  "obligatoryPeople": [],
+	  "allowsSlaves": false,
+	  "locations": [
+		{
+		  "x": 315,
+		  "y": 160,
+		  "category": 3,
+		  "symbol": 14,
+		  "character": 3,
+		  "name": 1,
+		  "visible": true
+		}
+	  ],
+	  "industries": [
+		{"type": 1, "volume": 1.5, "forSale": false},
+		{"type": 9, "volume": 2, "forSale": false}
+	  ],
+	  "storagePrice": 100,
+	  "tax": 0,
+	  "electricityPrice": 0.3,
+	  "noticeability": 360,
+	  "salaryCoefficient": 0.5
+	}
+  ]
+}

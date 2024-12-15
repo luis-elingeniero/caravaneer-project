@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://b53otr8eqj5q"]
+
+[ext_resource type="Script" path="res://scripts/UI/main menus/change_language.gd" id="1_55y85"]
+[ext_resource type="Texture2D" uid="uid://vg476ykf1gr8" path="res://assets/sprites/main menu/TownBG.jpg" id="2_v84ct"]
+[ext_resource type="Texture2D" uid="uid://ddkiq8eyk0ug0" path="res://temporales/idioma.png" id="3_ck4if"]
+
+[node name="change language" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_55y85")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v84ct")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ck4if")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.827115, 0.230319, 0.218064, 1)
+layout_mode = 0
+offset_left = 419.0
+offset_top = 386.0
+offset_right = 459.0
+offset_bottom = 409.0
+rotation = -0.785398
+scale = Vector2(11.1299, 10.815)
+text = "WIP"
+uppercase = true
+visible_ratio = -0.333333
+
+[node name="proceed" type="Button" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 650.0
+offset_right = 593.0
+offset_bottom = 681.0
+scale = Vector2(3.43154, 1.71274)
+text = "proceed"
+
+[connection signal="pressed" from="proceed" to="." method="_on_proceed_pressed"]

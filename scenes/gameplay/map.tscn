@@ -1,0 +1,171 @@
+[gd_scene load_steps=17 format=3 uid="uid://dg7rwj3j7ydml"]
+
+[ext_resource type="Texture2D" uid="uid://ck3ibrl7apffq" path="res://temporales/mapa.png" id="1_k1m01"]
+[ext_resource type="Script" path="res://scripts/core/world/towns.gd" id="1_n2apw"]
+[ext_resource type="Texture2D" uid="uid://cf5rilfmb3nyp" path="res://assets/sprites/map/797_MapBG.png" id="2_huyqq"]
+[ext_resource type="Texture2D" uid="uid://bbmyjcmrckllg" path="res://assets/sprites/map/caravan.png" id="3_ousoh"]
+[ext_resource type="Texture2D" uid="uid://isrxb2878u5q" path="res://assets/sprites/map/798_MapModeBase.png" id="4_3i2g8"]
+[ext_resource type="Texture2D" uid="uid://c5klbbec81gm8" path="res://assets/sprites/map/803_MapModeOverBackground.png" id="4_3sgd4"]
+[ext_resource type="Script" path="res://scripts/gameplay/caravan_(player).gd" id="5_5flem"]
+[ext_resource type="Texture2D" uid="uid://cu4aby58rmbsi" path="res://assets/sprites/map/802_MapModeGlass.png" id="5_k5rep"]
+[ext_resource type="Texture2D" uid="uid://bx422iw4t53s1" path="res://assets/sprites/map/caravan big arrow(temporal).png" id="7_jp5hg"]
+[ext_resource type="Texture2D" uid="uid://1ymmebe0d7cm" path="res://assets/sprites/map/caravan circule(temporal).png" id="8_fcfsg"]
+[ext_resource type="Texture2D" uid="uid://c5wknvdvmdkit" path="res://assets/sprites/map/caravan point arrow(temporal3).png" id="9_sql5a"]
+[ext_resource type="Script" path="res://scripts/core/world/city_visual.gd" id="12_kxe3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7nr8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2t532"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jxh1x"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sw1lf"]
+radius = 18.0
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_n2apw")
+
+[node name="camptura tempora" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="temporal" type="Sprite2D" parent="camptura tempora"]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_k1m01")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(1, 1)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1402, 1108)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_huyqq")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MapBackground" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r7nr8")
+
+[node name="MapModeOverBackground" type="TextureRect" parent="CanvasLayer/MapBackground"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("4_3sgd4")
+
+[node name="thing with numbers on the right" type="Panel" parent="CanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -337.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2t532")
+
+[node name="base" type="TextureRect" parent="CanvasLayer/thing with numbers on the right"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 337.0
+offset_bottom = 719.0
+mouse_filter = 0
+texture = ExtResource("4_3i2g8")
+expand_mode = 1
+
+[node name="glass" type="TextureRect" parent="CanvasLayer/thing with numbers on the right"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 337.0
+offset_bottom = 719.0
+mouse_filter = 0
+texture = ExtResource("5_k5rep")
+expand_mode = 1
+
+[node name="Angle" type="Label" parent="CanvasLayer"]
+modulate = Color(0.362178, 0.0730871, 1, 1)
+offset_left = 24.0
+offset_top = 25.0
+offset_right = 64.0
+offset_bottom = 48.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="caravan (player)" type="CharacterBody2D" parent="."]
+position = Vector2(-10000, -900)
+motion_mode = 1
+script = ExtResource("5_5flem")
+metadata/_edit_group_ = true
+
+[node name="click_Hitbox" type="Area2D" parent="caravan (player)"]
+priority = 5
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="caravan (player)/click_Hitbox"]
+shape = SubResource("CircleShape2D_jxh1x")
+one_way_collision_margin = 24.0
+
+[node name="world_hitbox" type="Area2D" parent="caravan (player)"]
+priority = 5
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="caravan (player)/world_hitbox"]
+shape = SubResource("CircleShape2D_jxh1x")
+one_way_collision_margin = 24.0
+
+[node name="CameraMAP" type="Camera2D" parent="caravan (player)"]
+position = Vector2(169.5, -3.05176e-05)
+scale = Vector2(2.07092, 0.986842)
+rotation_smoothing_enabled = true
+
+[node name="Caravan(temporal)" type="Sprite2D" parent="caravan (player)"]
+position = Vector2(473, 368)
+scale = Vector2(0.666666, 0.657895)
+texture = ExtResource("3_ousoh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="caravan (player)"]
+position = Vector2(0.499939, -3.05176e-05)
+shape = SubResource("CircleShape2D_sw1lf")
+
+[node name="Direction_Arrow" type="Sprite2D" parent="caravan (player)"]
+position = Vector2(0.499939, -3.05176e-05)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_jp5hg")
+
+[node name="Static_Circle" type="Sprite2D" parent="caravan (player)"]
+position = Vector2(0.5, 1.19209e-07)
+scale = Vector2(0.722222, 0.666667)
+texture = ExtResource("8_fcfsg")
+
+[node name="Mouse_Indicator" type="Sprite2D" parent="caravan (player)"]
+position = Vector2(0.499939, 26.25)
+scale = Vector2(0.611111, 0.535714)
+texture = ExtResource("9_sql5a")
+
+[node name="CityVisual" type="Node2D" parent="."]
+visible = false
+script = ExtResource("12_kxe3o")
+
+[connection signal="input_event" from="caravan (player)/click_Hitbox" to="caravan (player)" method="_on_click_hitbox_input_event"]

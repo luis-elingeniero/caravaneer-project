@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://nd47n00lfrd4"]
+
+[ext_resource type="Script" path="res://scripts/UI/main menus/character_creator.gd" id="1_q7gnb"]
+[ext_resource type="Texture2D" uid="uid://tfw2vsrrhpuh" path="res://temporales/character creator.png" id="2_uj23p"]
+
+[node name="caharacter creator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q7gnb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uj23p")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+columns = 3
+
+[node name="done" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00173611
+anchor_top = -0.0123457
+anchor_right = -0.00173611
+anchor_bottom = -0.0123457
+offset_left = 941.222
+offset_top = 679.889
+offset_right = 1199.22
+offset_bottom = 710.889
+text = "DONE"
+
+[node name="cancel" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0195313
+anchor_top = 0.0902778
+anchor_right = 0.0195313
+anchor_bottom = 0.0995371
+offset_left = 59.0
+offset_top = 606.0
+offset_right = 318.0
+offset_bottom = 631.0
+text = "CANCEL"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="done" to="." method="_on_done_pressed"]
+[connection signal="pressed" from="cancel" to="." method="_on_cancel_pressed"]

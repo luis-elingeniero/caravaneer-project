@@ -1,0 +1,221 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjhagvk06ix1p"]
+
+[ext_resource type="Texture2D" uid="uid://psf1vp73i5kb" path="res://temporales/next config.png" id="1_5h8g7"]
+[ext_resource type="Script" path="res://scripts/UI/main menus/extra_config.gd" id="1_6knc2"]
+[ext_resource type="Texture2D" uid="uid://vg476ykf1gr8" path="res://assets/sprites/main menu/TownBG.jpg" id="3_8s0nv"]
+
+[node name="extra config" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6knc2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5h8g7")
+expand_mode = 1
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8s0nv")
+expand_mode = 1
+
+[node name="BACK" type="Button" parent="."]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 657.0
+offset_right = 615.0
+offset_bottom = 688.0
+text = "BACK"
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 657.0
+offset_right = 932.0
+offset_bottom = 688.0
+text = "START"
+
+[node name="autosave" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -122.0
+offset_right = 39.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="autosave" type="CheckBox" parent="autosave"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="autosave"]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 2
+text = " auto save"
+uppercase = true
+
+[node name="show tutorial" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 189.0
+offset_right = 78.0
+offset_bottom = 213.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="show tutorial" type="CheckBox" parent="show tutorial"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="show tutorial"]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 2
+text = "show tutorial"
+uppercase = true
+
+[node name="dificulty" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 68.0
+offset_right = 39.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="normal" type="CheckBox" parent="dificulty"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="text_normal" type="Label" parent="dificulty"]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 2
+text = "normal"
+uppercase = true
+
+[node name="hard" type="CheckBox" parent="dificulty"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="text_hard" type="Label" parent="dificulty"]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 2
+text = " hard"
+uppercase = true
+
+[node name="mode" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -246.0
+offset_right = 76.0
+offset_bottom = -194.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="story" type="CheckBox" parent="mode"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="story mode" type="Label" parent="mode"]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 2
+text = "story mode"
+uppercase = true
+
+[node name="survival" type="CheckBox" parent="mode"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="survival mode" type="Label" parent="mode"]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 2
+text = "survival mode"
+uppercase = true
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 0
+offset_left = 560.0
+offset_top = 334.0
+offset_right = 726.0
+offset_bottom = 357.0
+text = "please select dificulty"
+horizontal_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(560, 456)
+points = PackedVector2Array(82, 15, 28, 9)
+width = 5.0
+default_color = Color(0.156863, 0.141176, 0.12549, 1)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(560, 142)
+points = PackedVector2Array(155, 16, 28, 9)
+width = 5.0
+default_color = Color(0.156863, 0.141176, 0.12549, 1)
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 0
+offset_left = 679.0
+offset_top = 202.0
+offset_right = 813.0
+offset_bottom = 225.0
+rotation = 0.523598
+text = "not implemented"
+
+[node name="Label3" type="Label" parent="."]
+modulate = Color(0.156863, 0.141176, 0.12549, 1)
+layout_mode = 0
+offset_left = 726.0
+offset_top = 513.0
+offset_right = 860.0
+offset_bottom = 536.0
+rotation = 0.523598
+text = "not implemented"
+
+[connection signal="pressed" from="BACK" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="button_down" from="autosave/autosave" to="." method="_on_autosave_button_down"]
+[connection signal="button_down" from="show tutorial/show tutorial" to="." method="_on_show_tutorial_button_down"]
+[connection signal="button_down" from="dificulty/normal" to="." method="_on_normal_button_down"]
+[connection signal="button_down" from="dificulty/hard" to="." method="_on_hard_button_down"]
+[connection signal="button_down" from="mode/story" to="." method="_on_story_button_down"]
+[connection signal="button_down" from="mode/survival" to="." method="_on_survival_button_down"]

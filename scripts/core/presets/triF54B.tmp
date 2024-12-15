@@ -1,0 +1,176 @@
+{
+    "zones": [
+        {
+            "name": 1605,
+            "id": 11,
+            "x": -10000,
+            "y": -1000,
+            "population": 48,
+            "obligatoryPeople": [],
+            "allowsSlaves": false,
+            "locations": [
+                {
+                    "x": 150,
+                    "y": 125,
+                    "category": 1,
+                    "subCategory": 5,
+                    "symbol": 15,
+                    "visible": true,
+                    "name": 1632,
+                    "margin": 0.5
+                },
+                {
+                    "x": 355,
+                    "y": 80,
+                    "category": 1,
+                    "subCategory": 6,
+                    "symbol": 17,
+                    "visible": true,
+                    "name": 1662,
+                    "margin": 0.5,
+                    "filters": [
+                        "animals",
+                        "carts",
+                        "cars",
+                        "slaves"
+                    ]
+                },
+                {
+                    "x": 455,
+                    "y": 200,
+                    "category": 2,
+                    "subCategory": 1,
+                    "symbol": 4,
+                    "visible": true,
+                    "name": 1416,
+                    "relPrice": 0,
+                    "surgeries": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "x": 254,
+                    "y": 278,
+                    "category": 3,
+                    "symbol": 14,
+                    "character": 1,
+                    "name": 1,
+                    "visible": true
+                },
+                {
+                    "x": 330,
+                    "y": 180,
+                    "category": 3,
+                    "symbol": 14,
+                    "character": 2,
+                    "name": 1,
+                    "visible": true
+                }
+            ],
+            "industries": [
+                {
+                    "type": 23,
+                    "volume": 15,
+                    "forSale": false
+                },
+                {
+                    "type": 24,
+                    "volume": 12,
+                    "forSale": false
+                },
+                {
+                    "type": 25,
+                    "volume": 3,
+                    "forSale": false
+                },
+                {
+                    "type": 26,
+                    "volume": 6,
+                    "forSale": false
+                },
+                {
+                    "type": 27,
+                    "volume": 7,
+                    "forSale": false
+                },
+                {
+                    "type": 9,
+                    "volume": 21,
+                    "forSale": false
+                }
+            ],
+            "storyOnly": true,
+            "noPeopleToHire": true,
+            "cantExpandStorage": true,
+            "stableEmployment": true,
+            "defaultStorage": 100,
+            "constantPopulation": true,
+            "storagePrice": 100,
+            "tax": 0.05,
+            "electricityPrice": 0.3,
+            "noticeability": 160
+        },
+        {
+            "name": 1610,
+            "id": 12,
+            "x": -9950,
+            "y": -1300,
+            "population": 1,
+            "obligatoryPeople": [],
+            "allowsSlaves": false,
+            "locations": [
+                {
+                    "x": 315,
+                    "y": 160,
+                    "category": 3,
+                    "symbol": 14,
+                    "character": 3,
+                    "name": 1,
+                    "visible": true
+                },
+                {
+                    "x": 315,
+                    "y": 160,
+                    "category": 1,
+                    "subCategory": 1,
+                    "symbol": 1,
+                    "visible": false,
+                    "name": 499,
+                    "margin": 0.5
+                }
+            ],
+            "storyOnly": true,
+            "noPeopleToHire": true,
+            "cantExpandStorage": true,
+            "stableEmployment": true,
+            "constantPopulation": true,
+            "industries": [
+                {
+                    "type": 1,
+                    "volume": 1.5,
+                    "forSale": false
+                },
+                {
+                    "type": 9,
+                    "volume": 2,
+                    "forSale": false
+                },
+                {
+                    "type": 3,
+                    "volume": 0.1,
+                    "forSale": false
+                }
+            ],
+            "storagePrice": 100,
+            "tax": 0,
+            "electricityPrice": 0.3,
+            "noticeability": 360,
+            "salaryCoefficient": 0.5,
+            "maxAttributes": 0.8,
+            "maxExperience": 0.8,
+            "faction": 1
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq3tkvu78rvap"]
+
+[ext_resource type="Texture2D" uid="uid://b7ldaml6flt8n" path="res://assets/sprites/main menu/TitleScreen.jpg" id="1_vxhjm"]
+[ext_resource type="Script" path="res://scripts/UI/main menus/main_menu.gd" id="1_yb2a8"]
+[ext_resource type="Texture2D" uid="uid://bunl7f2guc7xp" path="res://temporales/menu botones.png" id="2_getos"]
+[ext_resource type="Texture2D" uid="uid://dnqrmsjrnje22" path="res://assets/sprites/main menu/SoundSwitchSFX.png" id="3_bq1w4"]
+[ext_resource type="Texture2D" uid="uid://botonwbe2n8hm" path="res://assets/sprites/main menu/SoundSwitchMusic.png" id="4_b15h7"]
+[ext_resource type="Texture2D" uid="uid://cexbdhen4ki3o" path="res://assets/sprites/main menu/FullScreenOn.png" id="5_xxsmx"]
+
+[node name="main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yb2a8")
+
+[node name="TitleScreen" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vxhjm")
+expand_mode = 1
+
+[node name="menu completo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_getos")
+expand_mode = 1
+
+[node name="on_off buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 47.0
+offset_right = -16.0
+offset_bottom = 215.0
+grow_horizontal = 0
+
+[node name="SFX" type="Button" parent="on_off buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_bq1w4")
+flat = true
+icon_alignment = 1
+
+[node name="music" type="Button" parent="on_off buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("4_b15h7")
+flat = true
+
+[node name="full screen" type="Button" parent="on_off buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("5_xxsmx")
+flat = true
+
+[node name="principal buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0225694
+anchor_top = 0.337963
+anchor_right = 0.296007
+anchor_bottom = 0.896605
+grow_vertical = 2
+theme_override_constants/separation = 24
+metadata/_edit_use_anchors_ = true
+
+[node name="new game" type="Button" parent="principal buttons"]
+layout_mode = 2
+button_mask = 3
+text = "nueva partida"
+
+[node name="load game" type="Button" parent="principal buttons"]
+layout_mode = 2
+text = "cargarpartida"
+
+[node name="DLC(mods)" type="Button" parent="principal buttons"]
+layout_mode = 2
+text = "contenido descargable
+"
+
+[node name="credits" type="Button" parent="principal buttons"]
+layout_mode = 2
+text = "creditos
+"
+
+[node name="instructions and guides" type="Button" parent="principal buttons"]
+layout_mode = 2
+text = "intrucciones y guias"
+
+[node name="change lenguaje" type="Button" parent="principal buttons"]
+layout_mode = 2
+text = "change languaje"
+
+[node name="exit" type="Button" parent="principal buttons"]
+layout_mode = 2
+text = "salir"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.396106, 0.358465, 0.288612, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.368056
+anchor_top = 0.037037
+anchor_right = 0.488715
+anchor_bottom = 0.0725309
+text = "Godot demo"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.323785
+anchor_top = 0.762346
+anchor_right = 0.664931
+anchor_bottom = 0.882716
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This thing is incomplete as hell.
+ half of what you see doesn't work, and it looks horrible,
+ be patient as I want to add the main gameplay 
+and then I'll worry about making it not look so crappy."
+justification_flags = 171
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="on_off buttons/SFX" to="." method="_on_sfx_pressed"]
+[connection signal="pressed" from="on_off buttons/music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="on_off buttons/full screen" to="." method="_on_full_screen_pressed"]
+[connection signal="pressed" from="principal buttons/new game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="principal buttons/load game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="principal buttons/DLC(mods)" to="." method="_on_dl_cmods_pressed"]
+[connection signal="pressed" from="principal buttons/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="principal buttons/instructions and guides" to="." method="_on_instructions_and_guides_pressed"]
+[connection signal="pressed" from="principal buttons/change lenguaje" to="." method="_on_change_lenguaje_pressed"]
+[connection signal="pressed" from="principal buttons/exit" to="." method="_on_exit_pressed"]
